@@ -1,0 +1,84 @@
+{
+  "module_id": "E466201F",
+  "intent_mappings": [
+    {
+      "label": "classify_text",
+      "action": "classify_text",
+      "confidence": 0.95,
+      "routing_label": "nlp.classify"
+    },
+    {
+      "label": "analyze_sentiment",
+      "action": "analyze_sentiment",
+      "confidence": 0.93,
+      "routing_label": "nlp.sentiment"
+    },
+    {
+      "label": "extract_entities",
+      "action": "extract_entities",
+      "confidence": 0.91,
+      "routing_label": "nlp.ner"
+    },
+    {
+      "label": "tokenize_text",
+      "action": "tokenize",
+      "confidence": 0.97,
+      "routing_label": "nlp.tokenize"
+    },
+    {
+      "label": "summarize_text",
+      "action": "summarize",
+      "confidence": 0.88,
+      "routing_label": "nlp.summarize"
+    }
+  ],
+  "task_relationships": [
+    "nlp.classify",
+    "nlp.sentiment",
+    "nlp.ner",
+    "nlp.tokenize",
+    "nlp.summarize"
+  ],
+  "communication_patterns": [
+    "request_response",
+    "event_driven",
+    "streaming"
+  ],
+  "routes": {
+    "routes": [
+      {
+        "name": "nlp.classify",
+        "handler": "handler.classify_text",
+        "method": "POST"
+      },
+      {
+        "name": "nlp.sentiment",
+        "handler": "handler.analyze_sentiment",
+        "method": "POST"
+      },
+      {
+        "name": "nlp.ner",
+        "handler": "handler.extract_entities",
+        "method": "POST"
+      },
+      {
+        "name": "nlp.tokenize",
+        "handler": "handler.tokenize",
+        "method": "POST"
+      },
+      {
+        "name": "nlp.summarize",
+        "handler": "handler.summarize",
+        "method": "POST"
+      }
+    ],
+    "fallback": "handler.default",
+    "internal_routing": {
+      "classify_text": "executor.run_classifier",
+      "analyze_sentiment": "executor.run_sentiment",
+      "extract_entities": "executor.run_ner",
+      "tokenize": "executor.run_tokenizer",
+      "summarize": "executor.run_summarizer"
+    }
+  }
+}

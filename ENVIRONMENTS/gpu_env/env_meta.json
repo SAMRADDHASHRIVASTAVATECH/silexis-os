@@ -1,0 +1,11 @@
+{
+  "name": "gpu_env",
+  "display_name": "GPU Compute",
+  "hardware": "gpu",
+  "packages": [
+    "cupy",
+    "numpy",
+    "scipy"
+  ],
+  "compatibility_score": 0
+}

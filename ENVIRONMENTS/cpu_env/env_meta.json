@@ -1,0 +1,11 @@
+{
+  "name": "cpu_env",
+  "display_name": "CPU General",
+  "hardware": "cpu",
+  "packages": [
+    "numpy",
+    "requests",
+    "pyyaml"
+  ],
+  "compatibility_score": 0
+}

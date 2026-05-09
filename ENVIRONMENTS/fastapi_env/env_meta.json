@@ -1,0 +1,11 @@
+{
+  "name": "fastapi_env",
+  "display_name": "FastAPI Service",
+  "hardware": "cpu",
+  "packages": [
+    "fastapi",
+    "uvicorn",
+    "pydantic"
+  ],
+  "compatibility_score": 0
+}

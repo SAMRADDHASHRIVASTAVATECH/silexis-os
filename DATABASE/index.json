@@ -1,0 +1,9 @@
+{
+  "E466201F": {
+    "name": "NLP Processor",
+    "version": "1.2.0",
+    "purpose": "nlp",
+    "stored_at": 1778364859.0154421,
+    "module_dir": "DATABASE\\modules\\E466201F"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "torch_env",
+  "display_name": "PyTorch Runtime",
+  "hardware": "gpu",
+  "packages": [
+    "torch",
+    "torchvision",
+    "numpy"
+  ],
+  "compatibility_score": 0
+}

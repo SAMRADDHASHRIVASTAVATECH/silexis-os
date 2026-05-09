@@ -1,0 +1,9 @@
+{
+  "name": "NLP Processor",
+  "id": "nlp_processor_v1",
+  "version": "1.2.0",
+  "entry_points": ["src/main.py"],
+  "runtime_type": "cpu_env",
+  "dependencies_summary": "transformers, nltk, spacy",
+  "compatibility_flags": ["python>=3.9", "cpu_compatible"]
+}

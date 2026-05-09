@@ -1,0 +1,7 @@
+{
+  "purpose": "nlp",
+  "confidence": 0.5,
+  "action_count": 5,
+  "expansion_score": 0.8,
+  "recommended_env": "cpu_env"
+}

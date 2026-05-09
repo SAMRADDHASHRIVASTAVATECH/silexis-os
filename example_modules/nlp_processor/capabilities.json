@@ -1,0 +1,34 @@
+{
+  "capabilities": [
+    {
+      "name": "classify_text",
+      "description": "Classify input text into predefined categories",
+      "inputs": ["text: str"],
+      "outputs": ["category: str", "confidence: float"]
+    },
+    {
+      "name": "analyze_sentiment",
+      "description": "Determine sentiment polarity of input text",
+      "inputs": ["text: str"],
+      "outputs": ["sentiment: str", "score: float"]
+    },
+    {
+      "name": "extract_entities",
+      "description": "Extract named entities from text",
+      "inputs": ["text: str"],
+      "outputs": ["entities: list[dict]"]
+    },
+    {
+      "name": "tokenize",
+      "description": "Tokenize input text into word/subword tokens",
+      "inputs": ["text: str"],
+      "outputs": ["tokens: list[str]"]
+    },
+    {
+      "name": "summarize",
+      "description": "Generate a concise summary of long text",
+      "inputs": ["text: str", "max_length: int"],
+      "outputs": ["summary: str"]
+    }
+  ]
+}

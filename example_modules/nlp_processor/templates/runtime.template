@@ -1,0 +1,4 @@
+RUNTIME_TEMPLATE_VERSION=1.0
+ENTRY_POINT=src/main.py
+HANDLER=src/handler.py
+EXECUTOR=src/executor.py

@@ -1,0 +1,69 @@
+{
+  "E466201F": {
+    "module_id": "E466201F",
+    "module_name": "NLP Processor",
+    "version": "1.2.0",
+    "purpose": "nlp",
+    "actions": [
+      {
+        "name": "classify_text",
+        "description": "Classify input text into predefined categories",
+        "inputs": [
+          "text: str"
+        ],
+        "outputs": [
+          "category: str",
+          "confidence: float"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "name": "analyze_sentiment",
+        "description": "Determine sentiment polarity of input text",
+        "inputs": [
+          "text: str"
+        ],
+        "outputs": [
+          "sentiment: str",
+          "score: float"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "name": "extract_entities",
+        "description": "Extract named entities from text",
+        "inputs": [
+          "text: str"
+        ],
+        "outputs": [
+          "entities: list[dict]"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "name": "tokenize",
+        "description": "Tokenize input text into word/subword tokens",
+        "inputs": [
+          "text: str"
+        ],
+        "outputs": [
+          "tokens: list[str]"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "name": "summarize",
+        "description": "Generate a concise summary of long text",
+        "inputs": [
+          "text: str",
+          "max_length: int"
+        ],
+        "outputs": [
+          "summary: str"
+        ],
+        "confidence": 0.95
+      }
+    ],
+    "expansion_score": 0.8
+  }
+}

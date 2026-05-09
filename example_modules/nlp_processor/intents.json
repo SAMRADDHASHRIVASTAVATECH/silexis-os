@@ -1,0 +1,34 @@
+{
+  "intents": [
+    {
+      "label": "classify_text",
+      "action": "classify_text",
+      "confidence": 0.95,
+      "routing_label": "nlp.classify"
+    },
+    {
+      "label": "analyze_sentiment",
+      "action": "analyze_sentiment",
+      "confidence": 0.93,
+      "routing_label": "nlp.sentiment"
+    },
+    {
+      "label": "extract_entities",
+      "action": "extract_entities",
+      "confidence": 0.91,
+      "routing_label": "nlp.ner"
+    },
+    {
+      "label": "tokenize_text",
+      "action": "tokenize",
+      "confidence": 0.97,
+      "routing_label": "nlp.tokenize"
+    },
+    {
+      "label": "summarize_text",
+      "action": "summarize",
+      "confidence": 0.88,
+      "routing_label": "nlp.summarize"
+    }
+  ]
+}

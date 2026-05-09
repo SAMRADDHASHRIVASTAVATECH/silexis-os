@@ -1,0 +1,1021 @@
+{
+  "C60BCAED": {
+    "module_id": "C60BCAED",
+    "intent_mappings": [],
+    "task_relationships": [],
+    "communication_patterns": [
+      "request_response",
+      "event_driven",
+      "streaming"
+    ],
+    "routes": {}
+  },
+  "89F82DB9": {
+    "module_id": "89F82DB9",
+    "intent_mappings": [
+      {
+        "label": "classify_text",
+        "action": "classify_text",
+        "confidence": 0.95,
+        "routing_label": "nlp.classify"
+      },
+      {
+        "label": "analyze_sentiment",
+        "action": "analyze_sentiment",
+        "confidence": 0.93,
+        "routing_label": "nlp.sentiment"
+      },
+      {
+        "label": "extract_entities",
+        "action": "extract_entities",
+        "confidence": 0.91,
+        "routing_label": "nlp.ner"
+      },
+      {
+        "label": "tokenize_text",
+        "action": "tokenize",
+        "confidence": 0.97,
+        "routing_label": "nlp.tokenize"
+      },
+      {
+        "label": "summarize_text",
+        "action": "summarize",
+        "confidence": 0.88,
+        "routing_label": "nlp.summarize"
+      }
+    ],
+    "task_relationships": [
+      "nlp.classify",
+      "nlp.sentiment",
+      "nlp.ner",
+      "nlp.tokenize",
+      "nlp.summarize"
+    ],
+    "communication_patterns": [
+      "request_response",
+      "event_driven",
+      "streaming"
+    ],
+    "routes": {
+      "routes": [
+        {
+          "name": "nlp.classify",
+          "handler": "handler.classify_text",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.sentiment",
+          "handler": "handler.analyze_sentiment",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.ner",
+          "handler": "handler.extract_entities",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.tokenize",
+          "handler": "handler.tokenize",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.summarize",
+          "handler": "handler.summarize",
+          "method": "POST"
+        }
+      ],
+      "fallback": "handler.default",
+      "internal_routing": {
+        "classify_text": "executor.run_classifier",
+        "analyze_sentiment": "executor.run_sentiment",
+        "extract_entities": "executor.run_ner",
+        "tokenize": "executor.run_tokenizer",
+        "summarize": "executor.run_summarizer"
+      }
+    }
+  },
+  "F5610BCA": {
+    "module_id": "F5610BCA",
+    "intent_mappings": [
+      {
+        "label": "classify_text",
+        "action": "classify_text",
+        "confidence": 0.95,
+        "routing_label": "nlp.classify"
+      },
+      {
+        "label": "analyze_sentiment",
+        "action": "analyze_sentiment",
+        "confidence": 0.93,
+        "routing_label": "nlp.sentiment"
+      },
+      {
+        "label": "extract_entities",
+        "action": "extract_entities",
+        "confidence": 0.91,
+        "routing_label": "nlp.ner"
+      },
+      {
+        "label": "tokenize_text",
+        "action": "tokenize",
+        "confidence": 0.97,
+        "routing_label": "nlp.tokenize"
+      },
+      {
+        "label": "summarize_text",
+        "action": "summarize",
+        "confidence": 0.88,
+        "routing_label": "nlp.summarize"
+      }
+    ],
+    "task_relationships": [
+      "nlp.classify",
+      "nlp.sentiment",
+      "nlp.ner",
+      "nlp.tokenize",
+      "nlp.summarize"
+    ],
+    "communication_patterns": [
+      "request_response",
+      "event_driven",
+      "streaming"
+    ],
+    "routes": {
+      "routes": [
+        {
+          "name": "nlp.classify",
+          "handler": "handler.classify_text",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.sentiment",
+          "handler": "handler.analyze_sentiment",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.ner",
+          "handler": "handler.extract_entities",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.tokenize",
+          "handler": "handler.tokenize",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.summarize",
+          "handler": "handler.summarize",
+          "method": "POST"
+        }
+      ],
+      "fallback": "handler.default",
+      "internal_routing": {
+        "classify_text": "executor.run_classifier",
+        "analyze_sentiment": "executor.run_sentiment",
+        "extract_entities": "executor.run_ner",
+        "tokenize": "executor.run_tokenizer",
+        "summarize": "executor.run_summarizer"
+      }
+    }
+  },
+  "3DC16A97": {
+    "module_id": "3DC16A97",
+    "intent_mappings": [
+      {
+        "label": "classify_text",
+        "action": "classify_text",
+        "confidence": 0.95,
+        "routing_label": "nlp.classify"
+      },
+      {
+        "label": "analyze_sentiment",
+        "action": "analyze_sentiment",
+        "confidence": 0.93,
+        "routing_label": "nlp.sentiment"
+      },
+      {
+        "label": "extract_entities",
+        "action": "extract_entities",
+        "confidence": 0.91,
+        "routing_label": "nlp.ner"
+      },
+      {
+        "label": "tokenize_text",
+        "action": "tokenize",
+        "confidence": 0.97,
+        "routing_label": "nlp.tokenize"
+      },
+      {
+        "label": "summarize_text",
+        "action": "summarize",
+        "confidence": 0.88,
+        "routing_label": "nlp.summarize"
+      }
+    ],
+    "task_relationships": [
+      "nlp.classify",
+      "nlp.sentiment",
+      "nlp.ner",
+      "nlp.tokenize",
+      "nlp.summarize"
+    ],
+    "communication_patterns": [
+      "request_response",
+      "event_driven",
+      "streaming"
+    ],
+    "routes": {
+      "routes": [
+        {
+          "name": "nlp.classify",
+          "handler": "handler.classify_text",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.sentiment",
+          "handler": "handler.analyze_sentiment",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.ner",
+          "handler": "handler.extract_entities",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.tokenize",
+          "handler": "handler.tokenize",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.summarize",
+          "handler": "handler.summarize",
+          "method": "POST"
+        }
+      ],
+      "fallback": "handler.default",
+      "internal_routing": {
+        "classify_text": "executor.run_classifier",
+        "analyze_sentiment": "executor.run_sentiment",
+        "extract_entities": "executor.run_ner",
+        "tokenize": "executor.run_tokenizer",
+        "summarize": "executor.run_summarizer"
+      }
+    }
+  },
+  "0893248B": {
+    "module_id": "0893248B",
+    "intent_mappings": [
+      {
+        "label": "classify_text",
+        "action": "classify_text",
+        "confidence": 0.95,
+        "routing_label": "nlp.classify"
+      },
+      {
+        "label": "analyze_sentiment",
+        "action": "analyze_sentiment",
+        "confidence": 0.93,
+        "routing_label": "nlp.sentiment"
+      },
+      {
+        "label": "extract_entities",
+        "action": "extract_entities",
+        "confidence": 0.91,
+        "routing_label": "nlp.ner"
+      },
+      {
+        "label": "tokenize_text",
+        "action": "tokenize",
+        "confidence": 0.97,
+        "routing_label": "nlp.tokenize"
+      },
+      {
+        "label": "summarize_text",
+        "action": "summarize",
+        "confidence": 0.88,
+        "routing_label": "nlp.summarize"
+      }
+    ],
+    "task_relationships": [
+      "nlp.classify",
+      "nlp.sentiment",
+      "nlp.ner",
+      "nlp.tokenize",
+      "nlp.summarize"
+    ],
+    "communication_patterns": [
+      "request_response",
+      "event_driven",
+      "streaming"
+    ],
+    "routes": {
+      "routes": [
+        {
+          "name": "nlp.classify",
+          "handler": "handler.classify_text",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.sentiment",
+          "handler": "handler.analyze_sentiment",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.ner",
+          "handler": "handler.extract_entities",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.tokenize",
+          "handler": "handler.tokenize",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.summarize",
+          "handler": "handler.summarize",
+          "method": "POST"
+        }
+      ],
+      "fallback": "handler.default",
+      "internal_routing": {
+        "classify_text": "executor.run_classifier",
+        "analyze_sentiment": "executor.run_sentiment",
+        "extract_entities": "executor.run_ner",
+        "tokenize": "executor.run_tokenizer",
+        "summarize": "executor.run_summarizer"
+      }
+    }
+  },
+  "E44518F8": {
+    "module_id": "E44518F8",
+    "intent_mappings": [
+      {
+        "label": "classify_text",
+        "action": "classify_text",
+        "confidence": 0.95,
+        "routing_label": "nlp.classify"
+      },
+      {
+        "label": "analyze_sentiment",
+        "action": "analyze_sentiment",
+        "confidence": 0.93,
+        "routing_label": "nlp.sentiment"
+      },
+      {
+        "label": "extract_entities",
+        "action": "extract_entities",
+        "confidence": 0.91,
+        "routing_label": "nlp.ner"
+      },
+      {
+        "label": "tokenize_text",
+        "action": "tokenize",
+        "confidence": 0.97,
+        "routing_label": "nlp.tokenize"
+      },
+      {
+        "label": "summarize_text",
+        "action": "summarize",
+        "confidence": 0.88,
+        "routing_label": "nlp.summarize"
+      }
+    ],
+    "task_relationships": [
+      "nlp.classify",
+      "nlp.sentiment",
+      "nlp.ner",
+      "nlp.tokenize",
+      "nlp.summarize"
+    ],
+    "communication_patterns": [
+      "request_response",
+      "event_driven",
+      "streaming"
+    ],
+    "routes": {
+      "routes": [
+        {
+          "name": "nlp.classify",
+          "handler": "handler.classify_text",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.sentiment",
+          "handler": "handler.analyze_sentiment",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.ner",
+          "handler": "handler.extract_entities",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.tokenize",
+          "handler": "handler.tokenize",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.summarize",
+          "handler": "handler.summarize",
+          "method": "POST"
+        }
+      ],
+      "fallback": "handler.default",
+      "internal_routing": {
+        "classify_text": "executor.run_classifier",
+        "analyze_sentiment": "executor.run_sentiment",
+        "extract_entities": "executor.run_ner",
+        "tokenize": "executor.run_tokenizer",
+        "summarize": "executor.run_summarizer"
+      }
+    }
+  },
+  "DB68C557": {
+    "module_id": "DB68C557",
+    "intent_mappings": [
+      {
+        "label": "classify_text",
+        "action": "classify_text",
+        "confidence": 0.95,
+        "routing_label": "nlp.classify"
+      },
+      {
+        "label": "analyze_sentiment",
+        "action": "analyze_sentiment",
+        "confidence": 0.93,
+        "routing_label": "nlp.sentiment"
+      },
+      {
+        "label": "extract_entities",
+        "action": "extract_entities",
+        "confidence": 0.91,
+        "routing_label": "nlp.ner"
+      },
+      {
+        "label": "tokenize_text",
+        "action": "tokenize",
+        "confidence": 0.97,
+        "routing_label": "nlp.tokenize"
+      },
+      {
+        "label": "summarize_text",
+        "action": "summarize",
+        "confidence": 0.88,
+        "routing_label": "nlp.summarize"
+      }
+    ],
+    "task_relationships": [
+      "nlp.classify",
+      "nlp.sentiment",
+      "nlp.ner",
+      "nlp.tokenize",
+      "nlp.summarize"
+    ],
+    "communication_patterns": [
+      "request_response",
+      "event_driven",
+      "streaming"
+    ],
+    "routes": {
+      "routes": [
+        {
+          "name": "nlp.classify",
+          "handler": "handler.classify_text",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.sentiment",
+          "handler": "handler.analyze_sentiment",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.ner",
+          "handler": "handler.extract_entities",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.tokenize",
+          "handler": "handler.tokenize",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.summarize",
+          "handler": "handler.summarize",
+          "method": "POST"
+        }
+      ],
+      "fallback": "handler.default",
+      "internal_routing": {
+        "classify_text": "executor.run_classifier",
+        "analyze_sentiment": "executor.run_sentiment",
+        "extract_entities": "executor.run_ner",
+        "tokenize": "executor.run_tokenizer",
+        "summarize": "executor.run_summarizer"
+      }
+    }
+  },
+  "ED3AAE6B": {
+    "module_id": "ED3AAE6B",
+    "intent_mappings": [
+      {
+        "label": "classify_text",
+        "action": "classify_text",
+        "confidence": 0.95,
+        "routing_label": "nlp.classify"
+      },
+      {
+        "label": "analyze_sentiment",
+        "action": "analyze_sentiment",
+        "confidence": 0.93,
+        "routing_label": "nlp.sentiment"
+      },
+      {
+        "label": "extract_entities",
+        "action": "extract_entities",
+        "confidence": 0.91,
+        "routing_label": "nlp.ner"
+      },
+      {
+        "label": "tokenize_text",
+        "action": "tokenize",
+        "confidence": 0.97,
+        "routing_label": "nlp.tokenize"
+      },
+      {
+        "label": "summarize_text",
+        "action": "summarize",
+        "confidence": 0.88,
+        "routing_label": "nlp.summarize"
+      }
+    ],
+    "task_relationships": [
+      "nlp.classify",
+      "nlp.sentiment",
+      "nlp.ner",
+      "nlp.tokenize",
+      "nlp.summarize"
+    ],
+    "communication_patterns": [
+      "request_response",
+      "event_driven",
+      "streaming"
+    ],
+    "routes": {
+      "routes": [
+        {
+          "name": "nlp.classify",
+          "handler": "handler.classify_text",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.sentiment",
+          "handler": "handler.analyze_sentiment",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.ner",
+          "handler": "handler.extract_entities",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.tokenize",
+          "handler": "handler.tokenize",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.summarize",
+          "handler": "handler.summarize",
+          "method": "POST"
+        }
+      ],
+      "fallback": "handler.default",
+      "internal_routing": {
+        "classify_text": "executor.run_classifier",
+        "analyze_sentiment": "executor.run_sentiment",
+        "extract_entities": "executor.run_ner",
+        "tokenize": "executor.run_tokenizer",
+        "summarize": "executor.run_summarizer"
+      }
+    }
+  },
+  "270F321F": {
+    "module_id": "270F321F",
+    "intent_mappings": [
+      {
+        "label": "classify_text",
+        "action": "classify_text",
+        "confidence": 0.95,
+        "routing_label": "nlp.classify"
+      },
+      {
+        "label": "analyze_sentiment",
+        "action": "analyze_sentiment",
+        "confidence": 0.93,
+        "routing_label": "nlp.sentiment"
+      },
+      {
+        "label": "extract_entities",
+        "action": "extract_entities",
+        "confidence": 0.91,
+        "routing_label": "nlp.ner"
+      },
+      {
+        "label": "tokenize_text",
+        "action": "tokenize",
+        "confidence": 0.97,
+        "routing_label": "nlp.tokenize"
+      },
+      {
+        "label": "summarize_text",
+        "action": "summarize",
+        "confidence": 0.88,
+        "routing_label": "nlp.summarize"
+      }
+    ],
+    "task_relationships": [
+      "nlp.classify",
+      "nlp.sentiment",
+      "nlp.ner",
+      "nlp.tokenize",
+      "nlp.summarize"
+    ],
+    "communication_patterns": [
+      "request_response",
+      "event_driven",
+      "streaming"
+    ],
+    "routes": {
+      "routes": [
+        {
+          "name": "nlp.classify",
+          "handler": "handler.classify_text",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.sentiment",
+          "handler": "handler.analyze_sentiment",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.ner",
+          "handler": "handler.extract_entities",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.tokenize",
+          "handler": "handler.tokenize",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.summarize",
+          "handler": "handler.summarize",
+          "method": "POST"
+        }
+      ],
+      "fallback": "handler.default",
+      "internal_routing": {
+        "classify_text": "executor.run_classifier",
+        "analyze_sentiment": "executor.run_sentiment",
+        "extract_entities": "executor.run_ner",
+        "tokenize": "executor.run_tokenizer",
+        "summarize": "executor.run_summarizer"
+      }
+    }
+  },
+  "DDEC1641": {
+    "module_id": "DDEC1641",
+    "intent_mappings": [
+      {
+        "label": "classify_text",
+        "action": "classify_text",
+        "confidence": 0.95,
+        "routing_label": "nlp.classify"
+      },
+      {
+        "label": "analyze_sentiment",
+        "action": "analyze_sentiment",
+        "confidence": 0.93,
+        "routing_label": "nlp.sentiment"
+      },
+      {
+        "label": "extract_entities",
+        "action": "extract_entities",
+        "confidence": 0.91,
+        "routing_label": "nlp.ner"
+      },
+      {
+        "label": "tokenize_text",
+        "action": "tokenize",
+        "confidence": 0.97,
+        "routing_label": "nlp.tokenize"
+      },
+      {
+        "label": "summarize_text",
+        "action": "summarize",
+        "confidence": 0.88,
+        "routing_label": "nlp.summarize"
+      }
+    ],
+    "task_relationships": [
+      "nlp.classify",
+      "nlp.sentiment",
+      "nlp.ner",
+      "nlp.tokenize",
+      "nlp.summarize"
+    ],
+    "communication_patterns": [
+      "request_response",
+      "event_driven",
+      "streaming"
+    ],
+    "routes": {
+      "routes": [
+        {
+          "name": "nlp.classify",
+          "handler": "handler.classify_text",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.sentiment",
+          "handler": "handler.analyze_sentiment",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.ner",
+          "handler": "handler.extract_entities",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.tokenize",
+          "handler": "handler.tokenize",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.summarize",
+          "handler": "handler.summarize",
+          "method": "POST"
+        }
+      ],
+      "fallback": "handler.default",
+      "internal_routing": {
+        "classify_text": "executor.run_classifier",
+        "analyze_sentiment": "executor.run_sentiment",
+        "extract_entities": "executor.run_ner",
+        "tokenize": "executor.run_tokenizer",
+        "summarize": "executor.run_summarizer"
+      }
+    }
+  },
+  "EB01B1B9": {
+    "module_id": "EB01B1B9",
+    "intent_mappings": [
+      {
+        "label": "classify_text",
+        "action": "classify_text",
+        "confidence": 0.95,
+        "routing_label": "nlp.classify"
+      },
+      {
+        "label": "analyze_sentiment",
+        "action": "analyze_sentiment",
+        "confidence": 0.93,
+        "routing_label": "nlp.sentiment"
+      },
+      {
+        "label": "extract_entities",
+        "action": "extract_entities",
+        "confidence": 0.91,
+        "routing_label": "nlp.ner"
+      },
+      {
+        "label": "tokenize_text",
+        "action": "tokenize",
+        "confidence": 0.97,
+        "routing_label": "nlp.tokenize"
+      },
+      {
+        "label": "summarize_text",
+        "action": "summarize",
+        "confidence": 0.88,
+        "routing_label": "nlp.summarize"
+      }
+    ],
+    "task_relationships": [
+      "nlp.classify",
+      "nlp.sentiment",
+      "nlp.ner",
+      "nlp.tokenize",
+      "nlp.summarize"
+    ],
+    "communication_patterns": [
+      "request_response",
+      "event_driven",
+      "streaming"
+    ],
+    "routes": {
+      "routes": [
+        {
+          "name": "nlp.classify",
+          "handler": "handler.classify_text",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.sentiment",
+          "handler": "handler.analyze_sentiment",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.ner",
+          "handler": "handler.extract_entities",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.tokenize",
+          "handler": "handler.tokenize",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.summarize",
+          "handler": "handler.summarize",
+          "method": "POST"
+        }
+      ],
+      "fallback": "handler.default",
+      "internal_routing": {
+        "classify_text": "executor.run_classifier",
+        "analyze_sentiment": "executor.run_sentiment",
+        "extract_entities": "executor.run_ner",
+        "tokenize": "executor.run_tokenizer",
+        "summarize": "executor.run_summarizer"
+      }
+    }
+  },
+  "199E27FC": {
+    "module_id": "199E27FC",
+    "intent_mappings": [
+      {
+        "label": "classify_text",
+        "action": "classify_text",
+        "confidence": 0.95,
+        "routing_label": "nlp.classify"
+      },
+      {
+        "label": "analyze_sentiment",
+        "action": "analyze_sentiment",
+        "confidence": 0.93,
+        "routing_label": "nlp.sentiment"
+      },
+      {
+        "label": "extract_entities",
+        "action": "extract_entities",
+        "confidence": 0.91,
+        "routing_label": "nlp.ner"
+      },
+      {
+        "label": "tokenize_text",
+        "action": "tokenize",
+        "confidence": 0.97,
+        "routing_label": "nlp.tokenize"
+      },
+      {
+        "label": "summarize_text",
+        "action": "summarize",
+        "confidence": 0.88,
+        "routing_label": "nlp.summarize"
+      }
+    ],
+    "task_relationships": [
+      "nlp.classify",
+      "nlp.sentiment",
+      "nlp.ner",
+      "nlp.tokenize",
+      "nlp.summarize"
+    ],
+    "communication_patterns": [
+      "request_response",
+      "event_driven",
+      "streaming"
+    ],
+    "routes": {
+      "routes": [
+        {
+          "name": "nlp.classify",
+          "handler": "handler.classify_text",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.sentiment",
+          "handler": "handler.analyze_sentiment",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.ner",
+          "handler": "handler.extract_entities",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.tokenize",
+          "handler": "handler.tokenize",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.summarize",
+          "handler": "handler.summarize",
+          "method": "POST"
+        }
+      ],
+      "fallback": "handler.default",
+      "internal_routing": {
+        "classify_text": "executor.run_classifier",
+        "analyze_sentiment": "executor.run_sentiment",
+        "extract_entities": "executor.run_ner",
+        "tokenize": "executor.run_tokenizer",
+        "summarize": "executor.run_summarizer"
+      }
+    }
+  },
+  "E466201F": {
+    "module_id": "E466201F",
+    "intent_mappings": [
+      {
+        "label": "classify_text",
+        "action": "classify_text",
+        "confidence": 0.95,
+        "routing_label": "nlp.classify"
+      },
+      {
+        "label": "analyze_sentiment",
+        "action": "analyze_sentiment",
+        "confidence": 0.93,
+        "routing_label": "nlp.sentiment"
+      },
+      {
+        "label": "extract_entities",
+        "action": "extract_entities",
+        "confidence": 0.91,
+        "routing_label": "nlp.ner"
+      },
+      {
+        "label": "tokenize_text",
+        "action": "tokenize",
+        "confidence": 0.97,
+        "routing_label": "nlp.tokenize"
+      },
+      {
+        "label": "summarize_text",
+        "action": "summarize",
+        "confidence": 0.88,
+        "routing_label": "nlp.summarize"
+      }
+    ],
+    "task_relationships": [
+      "nlp.classify",
+      "nlp.sentiment",
+      "nlp.ner",
+      "nlp.tokenize",
+      "nlp.summarize"
+    ],
+    "communication_patterns": [
+      "request_response",
+      "event_driven",
+      "streaming"
+    ],
+    "routes": {
+      "routes": [
+        {
+          "name": "nlp.classify",
+          "handler": "handler.classify_text",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.sentiment",
+          "handler": "handler.analyze_sentiment",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.ner",
+          "handler": "handler.extract_entities",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.tokenize",
+          "handler": "handler.tokenize",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.summarize",
+          "handler": "handler.summarize",
+          "method": "POST"
+        }
+      ],
+      "fallback": "handler.default",
+      "internal_routing": {
+        "classify_text": "executor.run_classifier",
+        "analyze_sentiment": "executor.run_sentiment",
+        "extract_entities": "executor.run_ner",
+        "tokenize": "executor.run_tokenizer",
+        "summarize": "executor.run_summarizer"
+      }
+    }
+  }
+}

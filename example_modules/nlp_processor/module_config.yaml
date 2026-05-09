@@ -1,0 +1,15 @@
+operational_settings:
+  enabled: true
+  debug_mode: false
+  log_level: INFO
+
+activation:
+  auto_start: true
+  trigger: on_load
+
+retry:
+  max_attempts: 3
+  timeout_seconds: 30
+
+concurrency:
+  max_tasks: 4

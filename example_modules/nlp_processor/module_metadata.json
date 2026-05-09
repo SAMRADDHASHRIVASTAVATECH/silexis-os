@@ -1,0 +1,9 @@
+{
+  "name": "NLP Processor",
+  "description": "Natural language processing module for text classification, tokenization, sentiment analysis, and entity extraction.",
+  "tags": ["nlp", "text", "language", "classification", "sentiment", "entities"],
+  "author": "System",
+  "origin": "internal",
+  "system_id": "nlp_processor_v1",
+  "last_modified": "2026-05-10T00:00:00Z"
+}

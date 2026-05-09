@@ -1,0 +1,4 @@
+watchdog>=4.0.0
+pyyaml>=6.0.1
+tkinterdnd2>=0.3.0
+confluent-kafka>=2.3.0

@@ -1,0 +1,6 @@
+{
+  "required_modules": [],
+  "optional_modules": ["data_processor"],
+  "load_order": 1,
+  "conflicts": []
+}

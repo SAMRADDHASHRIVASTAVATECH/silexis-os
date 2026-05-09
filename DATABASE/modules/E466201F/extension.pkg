@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "E466201F",
+  "built_at": 1778364858.837802,
+  "capability_registry_entry": {
+    "module_id": "E466201F",
+    "module_name": "NLP Processor",
+    "version": "1.2.0",
+    "purpose": "nlp",
+    "actions": [
+      {
+        "name": "classify_text",
+        "description": "Classify input text into predefined categories",
+        "inputs": [
+          "text: str"
+        ],
+        "outputs": [
+          "category: str",
+          "confidence: float"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "name": "analyze_sentiment",
+        "description": "Determine sentiment polarity of input text",
+        "inputs": [
+          "text: str"
+        ],
+        "outputs": [
+          "sentiment: str",
+          "score: float"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "name": "extract_entities",
+        "description": "Extract named entities from text",
+        "inputs": [
+          "text: str"
+        ],
+        "outputs": [
+          "entities: list[dict]"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "name": "tokenize",
+        "description": "Tokenize input text into word/subword tokens",
+        "inputs": [
+          "text: str"
+        ],
+        "outputs": [
+          "tokens: list[str]"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "name": "summarize",
+        "description": "Generate a concise summary of long text",
+        "inputs": [
+          "text: str",
+          "max_length: int"
+        ],
+        "outputs": [
+          "summary: str"
+        ],
+        "confidence": 0.95
+      }
+    ],
+    "expansion_score": 0.8
+  },
+  "routing_definition": {
+    "module_id": "E466201F",
+    "intent_mappings": [
+      {
+        "label": "classify_text",
+        "action": "classify_text",
+        "confidence": 0.95,
+        "routing_label": "nlp.classify"
+      },
+      {
+        "label": "analyze_sentiment",
+        "action": "analyze_sentiment",
+        "confidence": 0.93,
+        "routing_label": "nlp.sentiment"
+      },
+      {
+        "label": "extract_entities",
+        "action": "extract_entities",
+        "confidence": 0.91,
+        "routing_label": "nlp.ner"
+      },
+      {
+        "label": "tokenize_text",
+        "action": "tokenize",
+        "confidence": 0.97,
+        "routing_label": "nlp.tokenize"
+      },
+      {
+        "label": "summarize_text",
+        "action": "summarize",
+        "confidence": 0.88,
+        "routing_label": "nlp.summarize"
+      }
+    ],
+    "task_relationships": [
+      "nlp.classify",
+      "nlp.sentiment",
+      "nlp.ner",
+      "nlp.tokenize",
+      "nlp.summarize"
+    ],
+    "communication_patterns": [
+      "request_response",
+      "event_driven",
+      "streaming"
+    ],
+    "routes": {
+      "routes": [
+        {
+          "name": "nlp.classify",
+          "handler": "handler.classify_text",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.sentiment",
+          "handler": "handler.analyze_sentiment",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.ner",
+          "handler": "handler.extract_entities",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.tokenize",
+          "handler": "handler.tokenize",
+          "method": "POST"
+        },
+        {
+          "name": "nlp.summarize",
+          "handler": "handler.summarize",
+          "method": "POST"
+        }
+      ],
+      "fallback": "handler.default",
+      "internal_routing": {
+        "classify_text": "executor.run_classifier",
+        "analyze_sentiment": "executor.run_sentiment",
+        "extract_entities": "executor.run_ner",
+        "tokenize": "executor.run_tokenizer",
+        "summarize": "executor.run_summarizer"
+      }
+    }
+  },
+  "intent_mapping_table": {
+    "classify_text": {
+      "action": "classify_text",
+      "module_id": "E466201F",
+      "confidence": 0.95
+    },
+    "analyze_sentiment": {
+      "action": "analyze_sentiment",
+      "module_id": "E466201F",
+      "confidence": 0.93
+    },
+    "extract_entities": {
+      "action": "extract_entities",
+      "module_id": "E466201F",
+      "confidence": 0.91
+    },
+    "tokenize_text": {
+      "action": "tokenize",
+      "module_id": "E466201F",
+      "confidence": 0.97
+    },
+    "summarize_text": {
+      "action": "summarize",
+      "module_id": "E466201F",
+      "confidence": 0.88
+    }
+  },
+  "environment_spec": {
+    "recommended": "cpu_env",
+    "requirements": "transformers>=4.30.0\nnltk>=3.8.0\nspacy>=3.5.0\nnumpy>=1.24.0\nrequests>=2.28.0\n",
+    "runtime_env": "RUNTIME_MODE=production\nHARDWARE_TARGET=cpu\nISOLATION=strict\nLOG_LEVEL=INFO\nMAX_SEQUENCE_LENGTH=512\n",
+    "env_definitions": [
+      "cpu.env",
+      "custom.env",
+      "fastapi.env",
+      "torch.env"
+    ]
+  },
+  "dependency_record": {
+    "required_modules": [],
+    "optional_modules": [
+      "data_processor"
+    ],
+    "load_order": 1,
+    "conflicts": []
+  },
+  "state_descriptor": {
+    "module_id": "E466201F",
+    "stage": "CONVERTING",
+    "created_at": 1778364858.837802,
+    "entry_points": [
+      "src/main.py"
+    ],
+    "runtime_type": "cpu_env"
+  },
+  "analyzer_output_summary": {
+    "purpose": "nlp",
+    "confidence": 0.5,
+    "action_count": 5,
+    "expansion_score": 0.8,
+    "recommended_env": "cpu_env"
+  },
+  "entry_point_pointers": [
+    "src/main.py"
+  ]
+}

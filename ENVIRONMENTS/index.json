@@ -1,0 +1,46 @@
+{
+  "torch_env": {
+    "name": "torch_env",
+    "display_name": "PyTorch Runtime",
+    "hardware": "gpu",
+    "packages": [
+      "torch",
+      "torchvision",
+      "numpy"
+    ],
+    "compatibility_score": 0
+  },
+  "fastapi_env": {
+    "name": "fastapi_env",
+    "display_name": "FastAPI Service",
+    "hardware": "cpu",
+    "packages": [
+      "fastapi",
+      "uvicorn",
+      "pydantic"
+    ],
+    "compatibility_score": 0
+  },
+  "gpu_env": {
+    "name": "gpu_env",
+    "display_name": "GPU Compute",
+    "hardware": "gpu",
+    "packages": [
+      "cupy",
+      "numpy",
+      "scipy"
+    ],
+    "compatibility_score": 0
+  },
+  "cpu_env": {
+    "name": "cpu_env",
+    "display_name": "CPU General",
+    "hardware": "cpu",
+    "packages": [
+      "numpy",
+      "requests",
+      "pyyaml"
+    ],
+    "compatibility_score": 0
+  }
+}

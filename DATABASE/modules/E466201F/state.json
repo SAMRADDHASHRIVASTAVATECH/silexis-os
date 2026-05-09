@@ -1,0 +1,10 @@
+{
+  "module_id": "E466201F",
+  "stage": "CONVERTING",
+  "stored_at": 1778364859.0062087,
+  "created_at": 1778364858.837802,
+  "entry_points": [
+    "src/main.py"
+  ],
+  "runtime_type": "cpu_env"
+}
