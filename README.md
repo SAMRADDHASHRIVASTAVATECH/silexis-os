@@ -113,12 +113,6 @@ Every stage is decoupled and communicates through clear file contracts, which ke
 ---
 
 <a id="system-previews"></a>
-## System Previews
-
-### Voidwalker Terminal Hub
-
-A command-focused control surface for orchestration, monitoring, and runtime inspection.
-
 ### Adaptive Dashboard
 
 A live module-aware interface for observing current registry state, routing status, and execution environment mappings.
